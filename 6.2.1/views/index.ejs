@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/addpost" method="get">
+        <input type="submit" value="Add post">
+    </form>
+
+    <p>
+        <%for(let key in posts){%>
+        <%if(posts.hasOwnProperty(key)) { %>
+
+        <div class="post" style="background: lightgrey">
+            <p>
+                Time:
+                <%=posts[key].time%>
+            </p>
+            <p>
+                Name:
+                <%=posts[key].name%>
+            </p>
+            <p>
+                Email:
+                <a href="mailto:<%=posts[key].email%>">
+                    <%=posts[key].email%></a>
+            </p>
+            <p>
+                Website:
+                <a href="<%=posts[key].website%>">
+                    <%=posts[key].website%></a>
+            </p>
+
+            <p> Comment:
+                <%=posts[key].comment%>
+            </p>
+        </div>
+        <hr>
+        <%} %>
+        <%}%>
+
+    </p>
+
+</body>
+
+</html>

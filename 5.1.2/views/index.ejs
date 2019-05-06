@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/sendmail" method="POST">
+        <label for = "from">From:</label>
+        <br>
+        <input type = "email" placeholder="From" name = "from">
+        <br>
+        <label for="to">To:</label>
+        <br>
+        <input type="email" value="robin.soderholm87@gmail.com" name = "recipient">
+        <br>
+        <label for="subject">Subject:</label>
+        <br>
+        <input type="text" name="subject" value="Testing sending email from node">
+        <br>
+        <label for="content">Content:</label>
+        <br>
+        <textarea name="content"></textarea>
+        <br>
+        <label for = "password">Password:</label>
+        <br>
+        <input type = "password" name = "password">
+        <hr>
+        <input type="submit" value="Send mail!">
+    </form>
+
+
+</body>
+
+</html>
